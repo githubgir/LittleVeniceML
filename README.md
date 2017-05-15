@@ -5,6 +5,7 @@ Little Venice Machine Learning Group
 * nano text editor
 * git clone <repository>
 * sudo = super user do
+* lsb_release -a
 
 # Setup on AWS
 ## Launch AWS EC2
@@ -21,8 +22,8 @@ http://cs231n.github.io/aws-tutorial/
   * 6006 TensorBoard
 
 ## Putty SSH to AWS from Windows
-http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
-http://techexposures.com/how-to-copy-files-to-aws-ec2-server-from-windows-pc-command-prompt/
+* http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
+* http://techexposures.com/how-to-copy-files-to-aws-ec2-server-from-windows-pc-command-prompt/
 
 Authorise SSH access to EC2 - i.e. open port 22
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html
@@ -89,12 +90,17 @@ http://www.packetnerd.com/?p=131
 * Jupyter Notebook on iPad 
 1) don't specify cerfiles in the script above, or
 2) properly via Certificate Authority (own or 3rd party)
-http://jupyter-notebook.readthedocs.io/en/latest/public_server.html
-https://letsencrypt.org/getting-started/
+  * http://jupyter-notebook.readthedocs.io/en/latest/public_server.html
+  * https://letsencrypt.org/getting-started/
 
-## Spot instances greyed out for Market AMIs
-https://www.paulwakeford.info/2016/01/07/aws-marketplace-and-spot-instances/
-https://aws.amazon.com/marketplace/pp/B06VSPXKDX
+## Issues
+### Spot instances greyed out for Market AMIs
+* https://www.paulwakeford.info/2016/01/07/aws-marketplace-and-spot-instances/
+* https://aws.amazon.com/marketplace/pp/B06VSPXKDX
+
+# Setup from Scratch
+* http://markus.com/install-theano-on-aws/
+* http://christopher5106.github.io/big/data/2016/01/27/two-AMI-to-create-the-fastest-cluster-with-gpu-at-the-minimal-engineering-cost-with-EC2-NVIDIA-Spark-and-BIDMach.html
 
 # Lerio Maggio Tutorial
 ## Required versions
@@ -126,8 +132,8 @@ theano==0.9.0 \
 lasagne
 ```
 ## Update instructions for Tensorflow
-https://www.tensorflow.org/install/install_linux#InstallingAnaconda
-https://www.tensorflow.org/install/install_linux#the_url_of_the_tensorflow_python_package
+* https://www.tensorflow.org/install/install_linux#InstallingAnaconda
+* https://www.tensorflow.org/install/install_linux#the_url_of_the_tensorflow_python_package
 
 ```
 pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.1.0-cp27-none-linux_x86_64.whl
@@ -227,10 +233,10 @@ This requires spot.json file with spot request configuration
 
 # Spark Clusters
 Setup instructions for AMI with Spark and ML libraries
-http://christopher5106.github.io/big/data/2016/01/27/two-AMI-to-create-the-fastest-cluster-with-gpu-at-the-minimal-engineering-cost-with-EC2-NVIDIA-Spark-and-BIDMach.html
-https://github.com/amplab/spark-ec2.git
-https://github.com/christopher5106/spark-ec2
-http://ampcamp.berkeley.edu/3/exercises/launching-a-bdas-cluster-on-ec2.html
+* http://christopher5106.github.io/big/data/2016/01/27/two-AMI-to-create-the-fastest-cluster-with-gpu-at-the-minimal-engineering-cost-with-EC2-NVIDIA-Spark-and-BIDMach.html
+* https://github.com/amplab/spark-ec2.git
+* https://github.com/christopher5106/spark-ec2
+* http://ampcamp.berkeley.edu/3/exercises/launching-a-bdas-cluster-on-ec2.html
 
 ```
 chmod -c 600 AWSKeyPair2.pem
@@ -287,20 +293,21 @@ http://cs231n.github.io/gce-tutorial-gpus/
 ## TensorFlow
 git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow
 
-https://github.com/anishathalye/neural-style
+* https://github.com/anishathalye/neural-style
+
 ModelZoo
-https://github.com/tensorflow/models
+* https://github.com/tensorflow/models
 
 ## TensorBoard 
-https://www.tensorflow.org/get_started/graph_viz
-https://www.tensorflow.org/get_started/summaries_and_tensorboard
+* https://www.tensorflow.org/get_started/graph_viz
+* https://www.tensorflow.org/get_started/summaries_and_tensorboard
 
 ## Lasagne
 * Neural Art Style Transfer
-https://github.com/Lasagne/Recipes/blob/master/examples/styletransfer/Art%20Style%20Transfer.ipynb
+  https://github.com/Lasagne/Recipes/blob/master/examples/styletransfer/Art%20Style%20Transfer.ipynb
 * KFKD
-http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
-https://www.kaggle.com/c/facial-keypoints-detection/details/deep-learning-tutorial
+  http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/
+  https://www.kaggle.com/c/facial-keypoints-detection/details/deep-learning-tutorial
 
 ## dist-Keras Keras+Spark
 https://db-blog.web.cern.ch/blog/joeri-hermans/2017-01-distributed-deep-learning-apache-spark-and-keras
