@@ -215,6 +215,9 @@ set AWS_USER=ec2-user
 
 putty -ssh -i C:\Dev\AWS\AWSKeyPair2.ppk %AWS_USER%@%AWS_URL%
 pscp -i C:\Dev\AWS\AWSKeyPair2.ppk C:\Dev\AWS\AWSKeyPair2.pem %AWS_USER%@%AWS_URL%:/home/%AWS_USER%/AWSKeyPair2.pem
+
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "https:\\%AWS_URL%:8888"
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "https:\\%AWS_URL%:6006"
 ```
 
 This requires spot.json file with spot request configuration
