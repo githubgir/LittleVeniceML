@@ -1,10 +1,10 @@
 # LittleVeniceML
 Little Venice Machine Learning Group
-# Content
 
-Setup on AWS
-Setup on AWS with spark-ec2
-Lerio Maggio Tutorial
+# Linux Shall Commands
+* nano text editor
+* git clone <repository>
+* sudo = super user do
 
 # Setup on AWS
 ## Launch AWS EC2
@@ -145,7 +145,41 @@ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorfl
 source activate tensorflow
 jupyter notebook
 ```
+## Configure Keras
+```
+nano ~/.keras/keras.json
+```
+with following content
+```
+{
+	"epsilon": 1e-07,
+	"backend": "tensorflow",
+	"floatx": "float32",
+	"image_data_format": "channels_last"
+}
+```
 
+## Configure Theano
+```
+THEANO_FLAGS='floatX=float32,device=gpu,mode=FAST_RUN,fastmath=True' jupyter notebook
+
+or
+
+nano ~/.theanorc
+```
+with following content
+```
+[global]
+floatX=float32
+device=gpu
+[mode]=FAST_RUN
+
+[nvcc]
+fastmath=True
+
+[cuda]
+root=/usr/local/cuda
+```
 
 # AWS CLI Command Line Interface
 Run on windows to create EC2 with spark-ec2 installed, then ssh on it and start cluster
@@ -176,6 +210,20 @@ set AWS_USER=ec2-user
 putty -ssh -i C:\Dev\AWS\AWSKeyPair2.ppk %AWS_USER%@%AWS_URL%
 pscp -i C:\Dev\AWS\AWSKeyPair2.ppk C:\Dev\AWS\AWSKeyPair2.pem %AWS_USER%@%AWS_URL%:/home/%AWS_USER%/AWSKeyPair2.pem
 ```
+
+This requires spot.json file with spot request configuration
+```
+{
+  "ImageId": "ami-72320f37",
+  "KeyName": "AWSKeyPair2",
+  "SecurityGroupIds": [ "sg-66dbf801" ],
+  "InstanceType": "m4.large",
+  "Placement": {
+    "AvailabilityZone": "us-west-1b"
+  }
+}
+```
+
 
 # Spark Clusters
 Setup instructions for AMI with Spark and ML libraries
@@ -223,17 +271,6 @@ launch spark-cluster
 
 ## PySpark install and Jupyter notebook configuration
 https://www.dataquest.io/blog/pyspark-installation-guide/
-
-# Theano configuration
-Theano not configured properly
-```
-THEANO_FLAGS='floatX=float32,device=gpu,mode=FAST_RUN,fastmath=True' jupyter notebook
-# or
-echo -e "\n[global]\nfloatX=float32\ndevice=gpu\n[mode]=FAST_RUN\n\n[nvcc]\nfastmath=True\n\n[cuda]\nroot=/usr/local/cuda" >> ~/.theanorc 
-
-home/ubuntu/.jupyter
-~/.theanorc
-```
 
 # Other ways than AWS EC2
 * AWS ML
