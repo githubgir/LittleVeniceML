@@ -103,6 +103,9 @@ http://www.packetnerd.com/?p=131
 * http://christopher5106.github.io/big/data/2016/01/27/two-AMI-to-create-the-fastest-cluster-with-gpu-at-the-minimal-engineering-cost-with-EC2-NVIDIA-Spark-and-BIDMach.html
 
 # Lerio Maggio Tutorial
+```
+git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
+```
 ## Required versions
 ```
 numpy: 1.11.1
