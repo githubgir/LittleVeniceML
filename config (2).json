@@ -1,0 +1,35 @@
+{
+  "IamFleetRole": "arn:aws:iam::253861447647:role/aws-ec2-spot-fleet-role",
+  "AllocationStrategy": "lowestPrice",
+  "TargetCapacity": 1,
+  "SpotPrice": "0.702",
+  "ValidFrom": "2017-05-16T00:11:24Z",
+  "ValidUntil": "2018-05-16T00:11:24Z",
+  "TerminateInstancesWithExpiration": true,
+  "LaunchSpecifications": [
+    {
+      "ImageId": "ami-e6ade686",
+      "InstanceType": "g2.2xlarge",
+      "KeyName": "AWSKeyPair2",
+      "SpotPrice": "0.702",
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/sda1",
+          "Ebs": {
+            "DeleteOnTermination": true,
+            "VolumeType": "gp2",
+            "VolumeSize": 60,
+            "SnapshotId": "snap-68bf6bea"
+          }
+        }
+      ],
+      "SecurityGroups": [
+        {
+          "GroupId": "sg-66dbf801"
+        }
+      ],
+      "UserData": "IyEvYmluL2Jhc2gKCkNFUlRJRklDQVRFX0RJUj0iL2hvbWUvdWJ1bnR1L2NlcnRpZmljYXRlIgpKVVBZVEVSX0NPTkZJR19ESVI9Ii9ob21lL3VidW50dS8uanVweXRlciIKVEhFQU5PX0NPTkZJR19ESVI9Ii9ob21lL3VidW50dSIKCmlmIFsgISAtZCAiJENFUlRJRklDQVRFX0RJUiIgXTsgdGhlbgogICAgbWtkaXIgJENFUlRJRklDQVRFX0RJUgogICAgb3BlbnNzbCByZXEgLXg1MDkgLW5vZGVzIC1kYXlzIDM2NSAtbmV3a2V5IHJzYToxMDI0IC1rZXlvdXQgIiRDRVJUSUZJQ0FURV9ESVIvbXlrZXkua2V5IiAtb3V0ICIkQ0VSVElGSUNBVEVfRElSL215Y2VydC5wZW0iIC1iYXRjaAogICAgY2hvd24gLVIgdWJ1bnR1ICRDRVJUSUZJQ0FURV9ESVIKZmkKCmlmIFsgISAtZiAiJEpVUFlURVJfQ09ORklHX0RJUi9qdXB5dGVyX25vdGVib29rX2NvbmZpZy5weSIgXTsgdGhlbgogICAgIyBnZW5lcmF0ZSBkZWZhdWx0IGNvbmZpZyBmaWxlCiAgICAjanVweXRlciBub3RlYm9vayAtLWdlbmVyYXRlLWNvbmZpZwogICAgbWtkaXIgJEpVUFlURVJfQ09ORklHX0RJUgoKICAgICMgYXBwZW5kIG5vdGVib29rIHNlcnZlciBzZXR0aW5ncwogICAgY2F0IDw8RU9GID4+ICIkSlVQWVRFUl9DT05GSUdfRElSL2p1cHl0ZXJfbm90ZWJvb2tfY29uZmlnLnB5IgojIFNldCBvcHRpb25zIGZvciBjZXJ0ZmlsZSwgaXAsIHBhc3N3b3JkLCBhbmQgdG9nZ2xlIG9mZiBicm93c2VyIGF1dG8tb3BlbmluZwpjLk5vdGVib29rQXBwLmNlcnRmaWxlID0gdSckQ0VSVElGSUNBVEVfRElSL215Y2VydC5wZW0nCmMuTm90ZWJvb2tBcHAua2V5ZmlsZSA9IHUnJENFUlRJRklDQVRFX0RJUi9teWtleS5rZXknCiMgU2V0IGlwIHRvICcqJyB0byBiaW5kIG9uIGFsbCBpbnRlcmZhY2VzIChpcHMpIGZvciB0aGUgcHVibGljIHNlcnZlcgpjLk5vdGVib29rQXBwLmlwID0gJyonCiNjLk5vdGVib29rQXBwLnBhc3N3b3JkID0gdScnCmMuTm90ZWJvb2tBcHAub3Blbl9icm93c2VyID0gRmFsc2UKCiMgSXQgaXMgYSBnb29kIGlkZWEgdG8gc2V0IGEga25vd24sIGZpeGVkIHBvcnQgZm9yIHNlcnZlciBhY2Nlc3MKYy5Ob3RlYm9va0FwcC5wb3J0ID0gODg4OApFT0YKICAgIGNob3duIC1SIHVidW50dSAkSlVQWVRFUl9DT05GSUdfRElSCmZp"
+    }
+  ],
+  "Type": "request"
+}
