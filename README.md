@@ -99,6 +99,7 @@ http://www.packetnerd.com/?p=131
 * https://aws.amazon.com/marketplace/pp/B06VSPXKDX
 
 # Setup from Scratch
+* https://www.pugetsystems.com/labs/hpc/Install-Ubuntu-16-04-or-14-04-and-CUDA-8-and-7-5-for-NVIDIA-Pascal-GPU-825/
 * http://markus.com/install-theano-on-aws/
 * http://christopher5106.github.io/big/data/2016/01/27/two-AMI-to-create-the-fastest-cluster-with-gpu-at-the-minimal-engineering-cost-with-EC2-NVIDIA-Spark-and-BIDMach.html
 
@@ -147,6 +148,29 @@ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorfl
 ```
 
 ## Upgrade NVIDIA drivers, CUDA, etc
+* https://www.pugetsystems.com/labs/hpc/Install-Ubuntu-16-04-or-14-04-and-CUDA-8-and-7-5-for-NVIDIA-Pascal-GPU-825/
+* http://markus.com/install-theano-on-aws/
+* http://christopher5106.github.io/big/data/2016/01/27/two-AMI-to-create-the-fastest-cluster-with-gpu-at-the-minimal-engineering-cost-with-EC2-NVIDIA-Spark-and-BIDMach.html
+
+
+### NVIDIA display driver
+```
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+sudo apt-get install nvidia-367
+```
+
+### CUDA Toolkit Download
+https://developer.nvidia.com/cuda-downloads
+```
+sudo wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda_8.0.61_375.26_linux-run
+chmod 755 cuda_*
+sudo bash cuda_8.0.61_375.26_linux-run
+sudo bash ./cuda_7.5.18_linux.run --silent --toolkit --samples --samplespath=/usr/local/cuda-7.5/samples --override
+sudo bash ./cuda_8.0.27_linux.run --silent --toolkit --samples --samplespath=/usr/local/cuda-8.0/samples --override
+# follow instructions
+
+```
 
 
 ## Start Jupyter Notebook in TensorFlow environment
