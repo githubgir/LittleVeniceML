@@ -171,6 +171,23 @@ sudo bash ./cuda_8.0.27_linux.run --silent --toolkit --samples --samplespath=/us
 # follow instructions
 
 ```
+### cudnn
+http://deeplearning.net/software/theano/library/sandbox/cuda/dnn.html
+http://www.pyimagesearch.com/2016/07/04/how-to-install-cuda-toolkit-and-cudnn-for-deep-learning/
+https://developer.nvidia.com/rdp/cudnn-download
+download cudnn v5 for cuda v8, otherwise won't work
+download requires login use my hotmail.co.uk and simple small letter pass do download file xxx.solitairetheme8
+then upload to ec2 via pscp
+```
+pscp -i C:\Dev\AWS\AWSKeyPair2.ppk C:\Users\Andreas\Downloads\cudnn-8.0-linux-x64-v5.0-ga.solitairetheme8 %AWS_USER%@%AWS_URL%:/home/%AWS_USER%/
+```
+```
+cd ~
+tar -zxf cudnn-7.5-linux-x64-v5.0-ga.tgz
+cd cuda
+sudo cp lib64/* /usr/local/cuda/lib64/
+sudo cp include/* /usr/local/cuda/include/
+```
 
 
 ## Start Jupyter Notebook in TensorFlow environment
