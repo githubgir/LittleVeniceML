@@ -5,6 +5,16 @@ Setup instructions for AMI with Spark and ML libraries
 * https://github.com/christopher5106/spark-ec2
 * http://ampcamp.berkeley.edu/3/exercises/launching-a-bdas-cluster-on-ec2.html
 
+
+## Use AWS CLI to launch an instance
+List of AMIs supported by spark e.g. ami-72320f37 in 
+
+https://github.com/amplab/spark-ec2/blob/v4/ami-list/us-west-1/hvm
+
+For some reason I cannot fine the needed AMI via EC2 dashboard, therefore need to launch via AWS CLI, 
+see [AWS Launch via CLI](https://github.com/githubgir/LittleVeniceML/blob/master/AWS_LAUNCH_CLI.md)
+
+## Launch Cluster from EC2
 ```
 chmod -c 600 AWSKeyPair2.pem
 # can connect to other instances
