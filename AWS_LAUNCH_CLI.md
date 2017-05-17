@@ -4,7 +4,8 @@ Automated launch of EC2 instance on windows including launching
 * Chrome with Jupyter Notebook link
 * Chrome with TensorBoard link
 
-This requires aws cli installed and configured
+## AWS Configure
+It requires aws cli installed and configured
 http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 ```
 aws configure
@@ -14,15 +15,23 @@ aws configure
 # Default output format [json]:
 ```
 
+## Create Instance
 ```
 SET AWS_AMI=ami-72320f37
 aws ec2 describe-images --image-ids %AWS_AMI%
+
 aws ec2 run-instances --image-id %AWS_AMI% --instance-type m4.large --key-name AWSKeyPair2 --security-groups sec-grp-ssh-jupyter-spark
+#or
 aws ec2 request-spot-instances --spot-price "0.1" --launch-specification file://C:/Dev/AWS/spot.json
+
 aws ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId, ImageId, PublicDnsName]"
-aws ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId,ImageId,PublicDnsName]" --filters "Name=image-id,Values=ami-72320f37"
+aws ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId,ImageId,PublicDnsName]" --filters "Name=image-id,Values=%AWS_AMI%"
+
+set AWS_URL=PublicDnsName
 ```
 
+## Launch SSH
+```
 set AWS_URL=ec2-54-193-106-52.us-west-1.compute.amazonaws.com
 set AWS_USER=ec2-user
 set AWS_USER=ubuntu
