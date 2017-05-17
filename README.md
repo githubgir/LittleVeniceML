@@ -4,10 +4,9 @@ Little Venice Machine Learning Group
 
 
 # Contents
-https://github.com/githubgir/LittleVeniceML/blob/master/AWS_CLUSTER
 
-
-
+* [AWS_CLUSTER](AWS_CLUSTER.md)
+* [AWS_CLUSTER](AWS_CLUSTER.md)
 
 
 
