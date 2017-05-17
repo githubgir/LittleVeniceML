@@ -13,27 +13,6 @@ http://cs231n.github.io/aws-tutorial/
   * 8888 Jupyter Notebook
   * 6006 TensorBoard
 
-## Putty SSH to AWS from Windows
-* http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
-* http://techexposures.com/how-to-copy-files-to-aws-ec2-server-from-windows-pc-command-prompt/
-
-Authorise SSH access to EC2 - i.e. open port 22
-http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html
-
-* PuttyGen to convert downloaded pem file to pkk
-* Putty GUI or putty cmd to ssh
-* pscp to securely transfer files
-```
-putty -ssh -i C:\Dev\AWS\AWSKeyPair2.ppk ec2-user@ec2-54-183-144-206.us-west-1.compute.amazonaws.com
-
-pscp -i C:\Dev\AWS\AWSKeyPair2.ppk C:\Dev\AWS\AWSKeyPair2.pem ec2-user@ec2-54-183-144-206.us-west-1.compute.amazonaws.com:/home/ec2-user/AWSKeyPair2.pem
-```
-
-## NVIDIA Monitor
-```
-nvidia-smi -l 1
-```
-
 ## Jupyter Notebook
 http://efavdb.com/deep-learning-with-jupyter-on-aws/
 * dont specify password otherwise not working
@@ -76,6 +55,27 @@ EOF
 fi
 ```
 
+## Putty SSH to AWS from Windows
+* http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
+* http://techexposures.com/how-to-copy-files-to-aws-ec2-server-from-windows-pc-command-prompt/
+
+Authorise SSH access to EC2 - i.e. open port 22
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html
+
+* PuttyGen to convert downloaded pem file to pkk
+* Putty GUI or putty cmd to ssh
+* pscp to securely transfer files
+```
+putty -ssh -i C:\Dev\AWS\AWSKeyPair2.ppk ec2-user@ec2-54-183-144-206.us-west-1.compute.amazonaws.com
+
+pscp -i C:\Dev\AWS\AWSKeyPair2.ppk C:\Dev\AWS\AWSKeyPair2.pem ec2-user@ec2-54-183-144-206.us-west-1.compute.amazonaws.com:/home/ec2-user/AWSKeyPair2.pem
+```
+
+## NVIDIA Monitor
+```
+nvidia-smi -l 1
+```
+
 ## iPad
 * SSH on iPad
 http://www.packetnerd.com/?p=131
@@ -89,8 +89,3 @@ http://www.packetnerd.com/?p=131
 ### Spot instances greyed out for Market AMIs
 * https://www.paulwakeford.info/2016/01/07/aws-marketplace-and-spot-instances/
 * https://aws.amazon.com/marketplace/pp/B06VSPXKDX
-
-# Setup from Scratch
-* https://www.pugetsystems.com/labs/hpc/Install-Ubuntu-16-04-or-14-04-and-CUDA-8-and-7-5-for-NVIDIA-Pascal-GPU-825/
-* http://markus.com/install-theano-on-aws/
-* http://christopher5106.github.io/big/data/2016/01/27/two-AMI-to-create-the-fastest-cluster-with-gpu-at-the-minimal-engineering-cost-with-EC2-NVIDIA-Spark-and-BIDMach.html
