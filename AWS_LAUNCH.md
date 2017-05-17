@@ -1,6 +1,8 @@
-# Launch on AWS
+# Launch on AWS (manual)
 
 ## Launch AWS EC2
+Follow this tutorial but use our own shared AMIs (e.g. ami-e7321387)
+
 http://cs231n.github.io/aws-tutorial/
 * zones
   * us-west-1 
@@ -14,6 +16,7 @@ http://cs231n.github.io/aws-tutorial/
   * 6006 TensorBoard
 
 ## Jupyter Notebook
+Adding Jupyter Notebook support, not required for our own AMI.
 http://efavdb.com/deep-learning-with-jupyter-on-aws/
 * dont specify password otherwise not working
 * dont specify certfile and key file otherwise not working on iPad
@@ -69,6 +72,8 @@ http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-inst
 putty -ssh -i C:\Dev\AWS\AWSKeyPair2.ppk ec2-user@ec2-54-183-144-206.us-west-1.compute.amazonaws.com
 
 pscp -i C:\Dev\AWS\AWSKeyPair2.ppk C:\Dev\AWS\AWSKeyPair2.pem ec2-user@ec2-54-183-144-206.us-west-1.compute.amazonaws.com:/home/ec2-user/AWSKeyPair2.pem
+
+
 ```
 
 ## NVIDIA Monitor
