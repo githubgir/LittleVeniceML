@@ -1,11 +1,20 @@
 ## WinPython
 
 ## CUDA Toolkit
+Install
 https://developer.nvidia.com/cuda-downloads
 
 ## cudnn
+Download and copy the files into C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\
+* https://developer.nvidia.com/rdp/cudnn-download
 
+## Numpy
+if import scipy complains about MKL (math kernel library) install numpy from wheel as explained below
+* http://stackoverflow.com/questions/37267399/importerror-cannot-import-name-numpy-mkl
+* http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy
 
+## OpenBLAS
+https://github.com/Lasagne/Lasagne/wiki/From-Zero-to-Lasagne-on-Windows-7-(64-bit)#openblas-precompiled
 
 ## Tensorflow
 https://www.tensorflow.org/install/install_windows
