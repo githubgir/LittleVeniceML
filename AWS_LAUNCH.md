@@ -2,14 +2,14 @@
 
 ## AMIs
 * us-west-1 cs231n
- * original
- * indian
- * udacity
- * mine
+  * original
+  * indian
+  * udacity
+  * mine
 * us-east-1
- * vict0rsch-2.0 in North Virginia
- * http://vict0rsch.github.io/2016/12/03/aws_gpu/
- * https://github.com/ritchieng/tensorflow-aws-ami
+  * vict0rsch-2.0 in North Virginia
+  * http://vict0rsch.github.io/2016/12/03/aws_gpu/
+  * https://github.com/ritchieng/tensorflow-aws-ami
 
 ## Launch AWS EC2
 Follow this tutorial but use our own shared AMIs (e.g. ami-e7321387)
