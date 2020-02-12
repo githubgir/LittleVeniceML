@@ -1,0 +1,319 @@
+Equity Vol Carry
+
+Rationale
+	On average, equity implied volatility tends to trade at a premium to subsequent realised volatility as investors demand a risk premium for selling optionality and being short volatility. This preference is driven by risk aversion, i.e. some market participants attach a higher value to being long protection
+Construction
+	Vol Carry World sells short-dated options (puts and calls) daily on global indexes and delta hedges. It buys back lower puts to mitigate drawdown's without diluting the underlying alpha drivers.
+Diversification
+	Vol carry is a cyclical factor, and has experienced some of the larger drawdowns in coincidence to the equity market, with which is positively correlated.
+Persistence
+	Volatility Carry is a very persistent and high Sharpe factor.
+Academic Literature
+	Bondarenko (2003) - “Why are Put Options So Expensive?“
+	Bakshi and Kapadia (2003) - “Volatility risk premium embedded in individual equity options: some new insights”
+
+Equity Low Beta
+
+Rationale
+	This factor attempts to capture the Risk adjusted outperformance of stocks with low beta to the market index vs. those with higher beta. Investors with long-only and leverage constraints prefer higher beta stocks, as it is often the only way to beat a trending benchmark.
+Construction
+	Each stock’s beta to the market is calculated. The target portfolio goes long the bottom quintile, weighted in  proportion to their negative beta
+Diversification
+	The low beta factor is defensive in nature, with negative correlations to the more cyclical equity market, short vol and Value, and a positive correlation with quality. Coupled with the latter it can acts as a good diversifier of risk
+Persistence
+	Low beta stocks have been consistent outperformers in the back tested period.
+Academic Literature
+	Black 1972 - “Capital Market Equilibrium with Restricted Borrowing”
+	Frazzini-Pedersen 2010 - “Betting against Beta”
+
+Size
+
+Rationale
+	Rational / Information Processing: Small caps tend to be less transparent and as a consequence are perceived to
+Construction
+	This factor attempts to capture the outperformance of smaller versus larger companies
+Diversification
+	Similarly to Value Size is a cyclical factor, exhibiting negative correlation to Momentum and quality.
+Persistence
+	Small caps tend to thrive in positive markets, while tougher market environments are detrimental to the size premium
+Academic Literature
+	Fama-French 1993 - “Common Risk Factors in the returns on stocks and bonds”
+
+Value
+Rationale
+	Value stocks are risky because they might be “Cheap” for a good reason. Value is a cyclical factor, which works  well  in combination to quality and momentum signals
+Construction
+	Each stock is given a value score using a mix of book to price and forward looking earnings yield. The target portfolio goes long the top quintile and short the bottom quintile, weighted in proportion to their value scores.
+Diversification
+	Value is negatively correlated to the defensive factors (low beta and quality ), as well as momentum, and it is in this interaction that this factor has added performance.
+Persistence
+	Value is a markedly cyclical factor, experiencing marked draw downs in contractionary markets, and sharp rallies in bull markets, especially following market bottoms
+Academic Literature
+	Fama-French 1993 - “Common Risk Factors in the returns on stocks and bonds”
+	
+Momentum
+Rationale
+	This factor attempts to capture the outperformance of the past winners versus the past losers. Based on formation times up to 12 months. Information uncertainty causes dispersion of news to be gradual. Reacting to price dynamics allows to focus on positions several Investors tend to avoid because of the information risk.
+Construction
+	For each stock we calculate its momentum and its volatility between one year ago and one month ago. We then rank these based on how much the momentum outperforms the others on a volatility-adjusted basis. The target portfolio goes long the top quintile and short the bottom quintile, weighted in proportion to their outperformance.
+Diversification
+	Momentum has historically been a good “hedge” for value strategies, while bearing a low correlation to other  factors 
+Persistence
+	Momentum is marked by positive persistent performance, marked by sharp draw downs around market bottoms.
+Academic Literature
+	Jegadeesh-Titman 1993 - “Returns to Buying Winners and Selling Losers: Implications for Stock Market Efficiency”
+	Hong-Stein 1999 - “A Unified Theory of Underreaction, Momentum Trading, and Overreaction in Asset Markets”
+		
+	
+Quality
+Rationale
+	This factor attempts to capture the outperformance of stocks that have a strong balance sheet vs. stocks that have a weaker balance sheet. Stocks with strong balance sheets tend to trade at higher multiples, and appear less likely to outperform. Investors therefore underestimate the ability of these to perform in a flight to quality environment.
+Construction
+	We take each stock’s Worldscope rating on each of seven balance sheet items such as accruals, leverage and asset turnover. The ratings are standardized, and the target portfolio goes long the top quintile and short the bottom quintile, weighted in proportion to their average standardized rating.
+Diversificatio
+	The quality factor is defensive in nature, with negative correlations to the more cyclical equity market, short vol and Value and a positive correlation with low beta. Coupled with the latter it 
+	acts as a good diversifier of market risk
+Persistence
+	The performance of Quality is in line with its defensive nature, experiencing unimpressive returns in growth periods, and capturing the flight to quality in tougher ones.
+Academic Literature
+	Piotrosky 2000 - “Value investing: The use of historical financial statement information to separate winners from losers”
+
+Credit Vol Carry
+
+Rationale
+	On average, credit implied volatility tends to trade at a premium to subsequent realised volatility as investors demand a risk premium for selling optionality and being short volatility. This preference is driven by risk aversion, i.e. market participants attach a higher value to being long protection
+Construction
+	Credit Volatility Carry sells short-dated options (puts and calls) on itraxx Xover and delta hedges on a daily basis.
+Diversificatio
+	Vol carry is a cyclical factor, and has experienced some of the larger drawdowns in coincidence to the equity market, with which is positively correlated
+Persistence
+	Volatility Carry is a very persistent and high Sharpe factor.
+Academic Literature
+	Bakshi and Kapadia (2003) - “Volatility risk premium embedded in individual equity options: some new insights”
+	Bondarenko (2003) - “Why are Put Options So Expensive?“
+
+
+Credit Curve
+
+Rationale
+	In general, investors tend to prefer higher beta assets compared to lower beta assets. This phenomena also persists in credit space where it gets exacerbated by the fact that given a similar rating, investors generally tend to prefer higher yield lower yield which leads to a relative compression of 10y spreads vs. 5y.
+Construction
+	Credit Curve Strategy sells short-dated (5y) protection and buys long-dated (10y) protection while maintaining DV01 neutrality
+Diversificatio
+	Credit curve positioning is a cyclical factor, and has experienced some of the larger drawdowns in coincidence to the equity market, with which is positively correlated.
+Persistence
+	Credit Curve can achieve positive performance by a curve steepening and/or positive curve roll-down.
+Academic Literature
+	Frazzini-Pedersen 2010 - “Betting against Beta
+
+
+TS Momentum
+Rationale
+	This factor capitalizes on the persistence of trends in short and medium-term interest rate movements which tend to be gradual and mainly driven by monetary policy
+Construction
+	On a daily basis, the strategy evaluates the recent performance of a number of futures contracts (with underlyings of less than 5 year maturity) for US , Germany and Australia. It then takes either a long or short position on each of the futures depending on whether their actual performance has been positive or negative.
+Diversification
+	Trend/momentum strategies are typically used as a diversification tool on high volatility environments.
+Persistence
+	The time series momentum strategy capitalizes on the trending behaviour of interest rate markets it can perform poorly in non-directional market environments.
+Academic Literature
+	“Time Series Momentum” Tobias J.Moskowitz a,n, Yao HuaOoi b, Lasse Heje Pedersen b, (2010)
+
+
+Bond Spread
+
+Rationale
+	This factor captures the observation that risk adjusted returns at the short-end of the curve tend to be higher than at the long-end. A leverage long position on the former vs. the latter tends to capture positive excess return as a compensation for risk premium that stems from investors having leverage constraints which favour long-term rates.
+Construction
+	The Bond Spread strategy enters a long position on Two-year US Bond futures and a short position on Ten-year US Bond futures, rolling every quarter. The exposure to each future is adjusted to approximate a Duration-Neutral position.
+Diversification
+	The curve steepens during recession as a result of agents in the economy requiring higher risk premium, thus this factor will tend to be counter cyclical or defensive.
+Persistence
+	Historically, the curve tends to be steeper at the front end than at the long end of the curve.
+Academic Literature
+	Ang-Piazzesi-Wei 2006 - “What does the yield curve tell us about GDP growth?”
+	Frazzini & Pedersen, 2013 – “Betting Against Beta”
+
+IR Curve Term Premium
+
+Rationale
+	This factor attempts to benefit from term premium at the short-end of the curve, mainly from the observation that short-term interest rate forwards tend to over estimate the actual realization of the spot. This term premium typically tends to be higher the longer the tenor of the forward contract
+Construction
+	IR Curve strategy enters a long position on the 4th Eurodollar futures contracts and a short position on the 2nd Eurodollar futures contract, rolling such position on a quarterly basis. A spread position allows to reduce interest rate directionality
+Diversification
+	Term premium tends to be countercyclical, being higher at recessions that in expansions. As a consequence the IR Curve strategy provides good diversification benefits against pro-cyclical asset classes such as the equity market.
+Persistence
+	Historically the curve tends to be upward sloping, thus persistence of excess returns should generally be expected. However the strategy can suffer losses when the curve steepens
+Academic Literature
+	Piazzesi-Swanson 2006 - “Futures prices as risk-adjusted forecast of monetary policy”
+
+
+FX Carry and FX Value
+Rationale
+	The FX Carry strategy has historically benefited from the tendency of FX forwards of high yielding currencies to overestimate the actual depreciation of future FX spot. The FX Valuation strategy relies on exchange rates reverting back to their fair value in the medium to long-term horizons.
+Construction
+	The FX Carry + Valuation strategy is an equally weighted basket of an FX Carry and an FX Valuation index. Each of them takes FX forwards contracts positions on a diversified basket of currencies selected from a wide universe of Emerging Market & G10 economies according to a systematic rule.
+Diversification
+	Combining a carry plus a valuation strategy tends to exhibit a stable path of returns. The correlation either to risk on or risk off assets tends to be low.
+Persistence
+	The FX Carry and FX Valuation strategies have historically exhibited low or negative correlation with each other. The latter has historically tended to perform well when there is an increase in general risk aversion whereas the former generally performs best in low risk aversion environments.
+Academic Literature
+	2001 - “Expected Returns: An investor guide to harvesting market rewards”.
+
+
+FX Momentum
+Rationale
+	This factor capitalizes on the persistence of trends in forward exchange rate movements which are driven both by carry as well as spot movements.
+Construction
+	monthly basis, the strategy evaluates the recent performance of 27 currencies against the USD. It then takes a long or short position on 12 currencies depending on whether their actual performance against the USD was positive or On a negative
+Diversification
+	Trend/momentum strategies are typically used as a diversification tool on high volatility environments.
+Persistence
+	The FX Momentum strategy capitalizes on the trending behaviour of FX markets. It can perform poorly in non- directional market environments. Since the actual investment is done on FX forwards the strategy captures trends on both the spot as well as the carry movements.
+Academic Literature
+	Moskowitz-Hua Obi-Pedersen 2010 - “Time Series Momentum”
+
+
+FX Carry Index
+
+Rationale
+	The FX Carry strategy has historically benefited from the tendency of FX forwards of high yielding currencies to overestimate the actual depreciation of future FX spot.
+Construction
+	On a monthly basis, the strategy evaluates the implied carry rate (FX Forward vs FX Spot) of a number of currencies (G10 & EM) against the USD and ranks them based on that measure. The strategy goes long single currency indices (which roll FX forwards) for the currencies with the highest carry and short single currency indices for the currencies with the lowest carry.
+Diversification
+	The correlation with FX Valuation tends to be low or negative.
+Persistence
+	The FX Carry generally performs best in low risk aversion environments
+Academic Literature
+	Ilmanen 2011 - “Expected Returns: An investor guide to harvesting market rewards”.
+
+
+FX Value
+
+Rationale
+	FX Valuation strategy relies on exchange rates reverting back to their fair value in the medium to long-term horizons.
+Construction
+	On a monthly basis, the strategy evaluates the valuation measure (based on DEER, “Dynamic Equilibrium Exchange Rate” model) of a number of currencies (G10 & EM) against the USD and ranks them based on that measure.  The strategy goes long single currency indices (which roll FX forwards) for the currencies with the highest ranking (i.e most undervalued) and short single currency indices for the currencies with the lowest ranking (i.e most overvalued).
+Diversification
+	The correlation with FX Carry tends to be low or negative.
+Persistence
+	The FX Valuation strategy has historically tended to perform well when there is an increase in general risk aversion
+Academic Literature
+	Ilmanen 2011 - “Expected Returns: An investor guide to harvesting market rewards”.
+
+
+FX Momentum
+Rationale
+	This factor capitalizes on the persistence of trends in forward exchange rate movements which are driven both by carry as well as spot movements.
+Construction
+	On a daily basis, the strategy evaluates the recent performance of 27 currencies against the USD based on a momentum factor (2 year exponentially weighted moving average of the daily returns with a half life of 3m). The strategy then takes either a long or short position on each of the currencies against the USD depending on whether the sign of the momentum factor is positive or negative
+Diversification
+	Trend/momentum strategies are typically used as a diversification tool on high volatility environments.
+Persistence
+	The FX Momentum strategy capitalizes on the trending behaviour of FX markets. It can perform poorly in non-directional market environments. Since the actual investment is done on FX forwards the strategy captures trends on both the spot as well as the carry movements.
+Academic Literature
+	Moskowitz-Hua Ooi-Pedersen 2010 - “Time Series Momentum”
+
+
+Rates Vol 10y
+Rationale
+	This factor attempts to benefit from the fact, that historically implied volatility has exceeded realized volatility on  treasury options
+Construction
+	The TY Vol Carry Strategy sells “25% delta strike strangles” (25% delta call and 25% delta put) with 1 month maturity. The position is delta hedged on a daily basis using the future expiry underlying the option.
+Diversification
+	The TY Vol Carry Strategy has exhibited low correlation to other Risk Premia Strategies. Daily delta hedging further reduces directional exposure of the strategy
+Persistence
+	Demand for short dated volatility in US markets outweighs supply. The main buyers are: Mortgage Banks and  insurers
+Academic Literature
+	Duarte (2006) –” The Causal Effect of Mortgage Refinancing on Interest-Rate Volatility”
+
+Rates VOl 30y
+Rationale
+	This factor attempts to benefit from the fact, that historically implied volatility has exceeded realized volatility on treasury options
+Construction
+	The US Vol Carry Strategy sells “25% delta strike strangles” (25% delta call and 25% delta put) with 1 month maturity. The position is delta hedged on a daily basis using the future expiry underlying the option
+Diversification
+	The US Vol Carry Strategy has exhibited low correlation to other Risk Premia Strategies. Daily delta hedging further reduces directional exposure of the strategy
+Persistence
+	Demand for short dated volatility in US markets outweighs supply. The main buyers are: Mortgage Banks and  insurers
+Academic Literature
+	Duarte (2006) –” The Causal Effect of Mortgage Refinancing on Interest-Rate Volatility”
+
+
+Rates Vol 10y Bunds
+Rationale
+	This factor attempts to benefit from the fact, that historically implied volatility has exceeded realized volatility on German bund options
+Construction
+	The RX Vol Carry Strategy sells “25% delta strike strangles” (25% delta call and 25% delta put) with 1 month maturity. The position is delta hedged on a daily basis using the future expiry underlying the option
+Diversification
+	The RX Vol Carry Strategy has exhibited low correlation to other Risk Premia Strategies. Daily delta hedging further reduces directional exposure of the strategy
+Persistence
+	Potential needs for hedging via options could outweigh supply
+
+
+Rates Momentum Short End
+
+Rationale
+	This factor capitalizes on the persistence of trends in short-term interest rate movements which tend to be gradual and mainly driven by monetary policy
+Construction
+	On a daily basis, the strategy evaluates the recent performance of rolling rates futures indices (Eurodollar, Euribor, Short Sterling) based on a momentum factor (2 year exponentially weighted moving average of the daily returns of the rolling futures indices with a half life of 3m). The strategy then takes either a long or short position on each of the rolling futures indices depending on whether the sign of the momentum factor is positive or negative
+Diversification
+	Trend/momentum strategies are typically used as a diversification tool in high volatility environments.
+Persistence
+	The time series momentum strategy capitalizes on the trending behaviour of interest rate markets. It can perform poorly in non-directional market environments.
+Academic Literature
+	“Time Series Momentum” Tobias J.Moskowitz a,n, Yao HuaOoi b, Lasse Heje Pedersen b, (2010)
+	“Discretion versus policy rules in practice”, Taylor, John (1993)
+
+Rates Momentum Long End
+Rationale
+	This factor capitalizes on the persistence of trends in short-term interest rate movements which tend to be gradual and mainly driven by monetary policy. Those gradual changes in short term rates, together with inflation, influence rates at the long end of the curve.
+Construction
+	On a daily basis, the strategy evaluates the recent performance of rolling government bond futures indices (US Treasuries, Germany, UK, Japan) based on a momentum factor (2 year exponentially weighted moving average of the daily returns of the rolling futures indices with a half life of 3m). The strategy then takes either a long or short position on each of the rolling futures indices depending on whether the sign of the momentum factor is positive or negative
+Diversification
+	Trend/momentum strategies are typically used as a diversification tool in high volatility environments.
+Persistence
+	The time series momentum strategy capitalizes on the trending behaviour of interest rate markets. It can perform poorly in non-directional market environments.
+Academic Literature
+	Time Series Momentum” Tobias J.Moskowitz a,n, Yao HuaOoi b, Lasse Heje Pedersen b, (2010)
+	“Discretion versus policy rules in practice”, Taylor, John (1993)
+
+
+Carry Short End
+Rationale
+	This factor attempts to benefit from term premium at the short-end of the curve, mainly from the observation that short-term interest rate forwards tend to over estimate the actual realization of the spot. This term premium typically tends to be higher the longer the tenor of the forward contract.
+Construction
+	The Rates Curve strategy enters a long position on the 4th Eurodollar, Euribor and Short Sterling futures contracts and a short position on the 2nd Eurodollar, Euribor and Short Sterling futures contract, rolling such position on a quarterly basis. A spread position allows to reduce interest rate directionality.
+Diversification
+	Term premium tends to be countercyclical, being higher at recessions that in expansions. As a consequence the Bond Curve strategy provides good diversification benefits against pro-cyclical asset classes such as the equity market.
+Persistence
+	Historically the curve tends to be upward sloping, thus persistence of excess returns should generally be expected. However the strategy can suffer losses when when the curve steepens.
+Academic Literature
+	Piazzesi-Swanson 2006 - “Futures prices as risk-adjusted forecast of monetary policy”
+
+
+Carry Long End
+Rationale
+	This factor captures the observation that risk adjusted returns at the short-end of the curve tend to be higher than at the long-end. A leveraged long position on the former vs. the latter tends to capture positive excess return as a compensation for risk premium that stems from investors having leverage constraints which favour long-term rates.
+Construction
+	The Bond Curve strategy enters a long position on 5y US Bond futures and a short position on 30y Bond futures, as well as along position on 5y German Schatz futures in USD and a short position on 10y German Bund futures in USD, rolling every quarter. The exposure to each future is adjusted to approximate a Duration-Neutral position.
+Diversification
+	The curve steepens during recession as a result of agents in the economy requiring higher risk premium, thus this factor will tend to be counter cyclical or defensive.
+Persistence
+	Historically, the curve tends to be steeper at the front end than at the long-end of the curve.
+Academic Literature
+	Ang-Piazzesi-Wei 2006 - “What does the yield curve tell us about GDP growth?”
+	Frazzini & Pedersen, 2013 – “Betting Against Beta”
+
+Calendar
+
+Rationale
+	This factor attempts to benefit from the fact, that bond indices usually are rebalanced at the end of every month and managers tracking such indices have to extend duration. A common and liquid instrument they could use to achieve this duration extension is to buy 10y bond futures.
+Construction
+	The Global End of Month Strategy takes a long 10y Government bond futures position 2 days prior to month-end and closes out the position at month-end. The strategy is a basket of End of Month strategies in 4 regions: US, Germany, Japan and UK
+Diversification
+	The End of Month Strategy only has exposure close to month-end and has therefore low correlation to the other Risk Premium Strategies
+Persistence
+	Historically the End of Month effect (bonds and futures increasing in price prior to month-end) has persisted. However the strategy can suffer losses if this effect were to weaken or reverse in the future.
+Academic Literature
+	Thaler 1987 - “Anomalies – Seasonal Movements in Security Prices II: Weekend, Holiday, Turn of the Month and Intraday Effects”
